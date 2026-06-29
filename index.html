@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guardian Shield Security</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#071018;
+color:white;
+overflow-x:hidden;
+}
+
+header{
+position:fixed;
+width:100%;
+top:0;
+left:0;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(0,0,0,.5);
+backdrop-filter:blur(10px);
+z-index:999;
+}
+
+.logo{
+font-size:28px;
+font-weight:800;
+color:#00d4ff;
+}
+
+nav a{
+margin-left:30px;
+text-decoration:none;
+color:white;
+transition:.3s;
+font-weight:500;
+}
+
+nav a:hover{
+color:#00d4ff;
+}
+
+.hero{
+
+height:100vh;
+display:flex;
+align-items:center;
+padding:0 8%;
+background:
+linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+url("https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1800&q=80");
+background-size:cover;
+background-position:center;
+
+}
+
+.hero-content{
+max-width:650px;
+}
+
+.hero h1{
+font-size:60px;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+color:#ddd;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:16px 35px;
+background:#00d4ff;
+color:#071018;
+text-decoration:none;
+border-radius:40px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+box-shadow:0 0 30px #00d4ff;
+}
+
+section{
+padding:90px 8%;
+}
+
+.title{
+font-size:40px;
+text-align:center;
+margin-bottom:60px;
+}
+
+.about{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:60px;
+align-items:center;
+
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+}
+
+.about p{
+line-height:1.8;
+color:#bbb;
+}
+
+.services{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+gap:30px;
+
+}
+
+.card{
+
+background:#101b26;
+padding:35px;
+border-radius:15px;
+transition:.4s;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+background:#16293a;
+
+}
+
+.card h3{
+margin:20px 0;
+}
+
+.card p{
+color:#aaa;
+line-height:1.7;
+}
+
+.stats{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+text-align:center;
+
+}
+
+.stat{
+
+background:#101b26;
+padding:40px;
+border-radius:15px;
+
+}
+
+.stat h2{
+font-size:48px;
+color:#00d4ff;
+}
+
+.why{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+
+}
+
+.why div{
+
+background:#101b26;
+padding:30px;
+border-left:5px solid #00d4ff;
+border-radius:12px;
+
+}
+
+.contact{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:40px;
+
+}
+
+input,textarea{
+
+width:100%;
+padding:16px;
+margin-bottom:20px;
+background:#101b26;
+border:none;
+color:white;
+border-radius:10px;
+
+}
+
+button{
+
+padding:15px;
+width:100%;
+background:#00d4ff;
+border:none;
+font-size:17px;
+font-weight:bold;
+border-radius:10px;
+cursor:pointer;
+
+}
+
+footer{
+
+background:#050b11;
+padding:30px;
+text-align:center;
+color:#999;
+
+}
+
+.reveal{
+
+opacity:0;
+transform:translateY(50px);
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+@media(max-width:800px){
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">Guardian Shield</div>
+
+<nav>
+
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#why">Why Us</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Your Safety.<br>Your Peace of Mind.</h1>
+
+<p>
+
+Professional security solutions for homes,
+businesses and institutions.
+24/7 protection from highly trained security officers.
+
+</p>
+
+<a href="#contact" class="btn">Get Protection</a>
+
+</div>
+
+</section>
+
+<section id="about" class="reveal">
+
+<h2 class="title">About Us</h2>
+
+<div class="about">
+
+<img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=900&q=80">
+
+<div>
+
+<p>
+
+Guardian Shield Security is a trusted security company
+providing modern security services including guarding,
+surveillance, rapid response, access control and CCTV monitoring.
+
+Our mission is to protect people, businesses and property using
+well-trained officers and advanced technology.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="services" class="reveal">
+
+<h2 class="title">Our Services</h2>
+
+<div class="services">
+
+<div class="card">
+
+<h3>🛡 Manned Guarding</h3>
+
+<p>
+Professional guards for businesses,
+construction sites and residential estates.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📹 CCTV Monitoring</h3>
+
+<p>
+24/7 surveillance and remote monitoring
+for complete protection.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🚓 Rapid Response</h3>
+
+<p>
+Emergency response teams available
+around the clock.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🏢 Corporate Security</h3>
+
+<p>
+Executive protection and office security
+solutions.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🚪 Access Control</h3>
+
+<p>
+Biometric systems, smart access cards
+and visitor management.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🔥 Alarm Systems</h3>
+
+<p>
+Installation of alarms and emergency
+response integration.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="reveal">
+
+<h2 class="title">Our Impact</h2>
+
+<div class="stats">
+
+<div class="stat">
+
+<h2>500+</h2>
+
+<p>Clients Protected</p>
+
+</div>
+
+<div class="stat">
+
+<h2>150+</h2>
+
+<p>Security Officers</p>
+
+</div>
+
+<div class="stat">
+
+<h2>24/7</h2>
+
+<p>Monitoring</p>
+
+</div>
+
+<div class="stat">
+
+<h2>10+</h2>
+
+<p>Years Experience</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="why" class="reveal">
+
+<h2 class="title">Why Choose Us</h2>
+
+<div class="why">
+
+<div>
+
+<h3>Licensed Professionals</h3>
+
+<p>Highly trained and certified officers.</p>
+
+</div>
+
+<div>
+
+<h3>Modern Equipment</h3>
+
+<p>Advanced surveillance and monitoring systems.</p>
+
+</div>
+
+<div>
+
+<h3>Fast Response</h3>
+
+<p>Immediate emergency response whenever needed.</p>
+
+</div>
+
+<div>
+
+<h3>Affordable Packages</h3>
+
+<p>Flexible pricing for businesses and homes.</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact" class="reveal">
+
+<h2 class="title">Contact Us</h2>
+
+<div class="contact">
+
+<div>
+
+<h3>Let's Secure Your Business</h3>
+
+<p>
+
+Phone: +254 700 000000
+
+<br><br>
+
+Email: info@guardianshield.com
+
+<br><br>
+
+Location: Nairobi, Kenya
+
+</p>
+
+</div>
+
+<form>
+
+<input type="text" placeholder="Full Name">
+
+<input type="email" placeholder="Email Address">
+
+<input type="text" placeholder="Phone Number">
+
+<textarea rows="6" placeholder="Tell us about your security needs"></textarea>
+
+<button>Send Request</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Guardian Shield Security. All Rights Reserved.
+
+</footer>
+
+<script>
+
+window.addEventListener("scroll",function(){
+
+let reveals=document.querySelectorAll(".reveal");
+
+reveals.forEach(function(el){
+
+let top=el.getBoundingClientRect().top;
+
+let height=window.innerHeight;
+
+if(top<height-120){
+
+el.classList.add("active");
+
+}
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
